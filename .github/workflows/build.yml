@@ -31,6 +31,10 @@ jobs:
           }
           JSON
           npx cap add android
+          D=android/app/src/main/java/com/moflixbd/app
+          mkdir -p $D
+          cp DlPlugin.java MainActivity.java $D/
+          sed -i 's/<application/<application android:usesCleartextTraffic="true"/' android/app/src/main/AndroidManifest.xml
           npx cap sync android
       - name: Build debug APK
         run: |
