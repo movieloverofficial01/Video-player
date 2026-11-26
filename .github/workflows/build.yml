@@ -26,6 +26,7 @@ jobs:
             "appId": "com.moflixbd.app",
             "appName": "MoflixBD",
             "webDir": "www",
+            "backgroundColor": "#15141a",
             "server": { "androidScheme": "https", "cleartext": true },
             "android": { "allowMixedContent": true }
           }
